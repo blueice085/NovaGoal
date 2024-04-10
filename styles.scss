@@ -11,10 +11,14 @@ $ng: #f6a716 !default;
 //   outline: 1px solid limegreen;
 // }
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-/*#region*/
+/* Disable AOS delay on mobile */
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*#region General*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -40,54 +44,7 @@ h6 {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# Disable AOS delay on mobile
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-/*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-/*#region*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: $ng;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #ffcb30;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-/*#endregion*/
-
-/*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-/*#region*/
+/*#region Header*/
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -123,10 +80,7 @@ h6 {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-/*#region*/
+/*#region Navigation Menu*/
 /**
   * Desktop Navigation 
   */
@@ -338,16 +292,13 @@ h6 {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-/*#region*/
+/*#region Hero Section */
 #hero {
   width: 100%;
   overflow: hidden;
   position: relative;
   /* background: linear-gradient(0deg, rgb(42, 44, 57) 0%, rgb(51, 54, 74) 100%); */
-  background: url("../background-0.jpg") top center;
+  background: url("/background-0.jpg") top center;
   background-size: cover;
   background-position: center top;
   padding: 0;
@@ -489,10 +440,7 @@ h6 {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-/*#region*/
+/*#region Sections General*/
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -534,10 +482,7 @@ section {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-/*#region*/
+/*#region About*/
 .about {
   padding-top: 80px;
 }
@@ -597,10 +542,7 @@ section {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-/*#region*/
+/*#region Services*/
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -654,45 +596,7 @@ section {
 }
 /*#endregion*/
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-/*#region*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: $ng;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #fab62c;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-/*#endregion*/
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-/*#region*/
+/*#region Footer*/
 #footer {
   background: #14151c;
   color: #fff;
@@ -749,5 +653,37 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+/*#endregion*/
+
+/*#region Back to top button*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: $ng;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #fab62c;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
 }
 /*#endregion*/
