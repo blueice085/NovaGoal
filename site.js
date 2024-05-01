@@ -40,6 +40,7 @@
   let navbarlinks = select("#navbar .scrollto", true);
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
+
     navbarlinks.forEach((navbarlink) => {
       if (!navbarlink.hash) return;
       let section = select(navbarlink.hash);
@@ -50,6 +51,14 @@
         navbarlink.classList.remove("active");
       }
     });
+
+    //alert(position);
+    const targetDropdown = document.querySelector(".navbar .dropdown ul");
+    if (position >= 600) {
+      targetDropdown.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    } else {
+      targetDropdown.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    }
   };
   window.addEventListener("load", navbarlinksActive);
   onscroll(document, navbarlinksActive);
