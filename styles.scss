@@ -6,6 +6,7 @@
 $ng: #f6a716 !default;
 //f6a716
 //ffc107
+//$dropdown-bg: rgba(200, 200, 255, 0.5) !default;
 
 // * {
 //   outline: 1px solid limegreen;
@@ -132,13 +133,19 @@ h6 {
   left: 14px;
   top: calc(100% + 30px);
   margin: 0;
+  width: 100px;
   padding: 10px 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  //box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 .navbar .dropdown ul li {
@@ -149,7 +156,8 @@ h6 {
   padding: 10px 20px;
   font-size: 14px;
   text-transform: none;
-  color: #414c64;
+  //color: #414c64;
+  color: #fff;
 }
 
 .navbar .dropdown ul a i {
@@ -239,16 +247,18 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
   overflow-y: auto;
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #414c64;
+  //color: #414c64;
+  color: #fff;
 }
 
 .navbar-mobile a:hover,
@@ -260,12 +270,13 @@ h6 {
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
+  width: unset;
   margin: 10px 20px;
   padding: 10px 0;
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  //background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -474,7 +485,7 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #555555;
   font-family: "Poppins", sans-serif;
 }
 
